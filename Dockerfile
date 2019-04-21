@@ -9,3 +9,8 @@ VOLUME /tmp
 RUN mkdir -p /app
 
 WORKDIR /app
+
+
+#Time
+ENV TW=Asia/Taipei
+RUN ln -snf /usr/share/zoneinfo/$TW /etc/localtime && echo $TW > /etc/timezone
